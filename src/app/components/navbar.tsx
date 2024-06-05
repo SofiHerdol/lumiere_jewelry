@@ -14,40 +14,56 @@ export default function Navbar() {
                 className="hidden md:block"
                 />
             </Link>
-            <div className="flex justify-center items-center space-x-10 text-2xl flex-1">
+            <div className="flex justify-center items-center space-x-10 text-xl flex-1">
                 <Link href="/" className="flex-initial relative">
-                    <span className="group inline-block">
-                        H O M E
-                        <span className="absolute top-0 left-0 w-full h-full bg-branch_color bg-opacity-25 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    </span>
+                    <p className="text-black hover:text-branch_color duration-500">
+                        new arrivals
+                    </p>
                 </Link>
-                
                 <Link href="/rings" className="flex-initial">
-                    R I N G S
+                    <p className="text-black hover:text-branch_color duration-500">
+                        rings
+                    </p>
                 </Link>
                 <Link href="/earrings" className="flex-initial">
-                    E A R R I N G S
+                    <p className="text-black hover:text-branch_color duration-500">
+                        earrings
+                    </p>
                 </Link>
                 <Link href="/necklaces" className="flex-initial">
-                    N E C K L A C E S
+                    <p className="text-black hover:text-branch_color duration-500">
+                        necklaces
+                    </p>
                 </Link>
                 <Link href="/bracelets" className="flex-initial">
-                    B R A C E L E T S
+                    <p className="text-black hover:text-branch_color duration-500">
+                        bracelets
+                    </p>
                 </Link>
                 <Link href="/contact" className="flex-initial">
-                    C O N T A C T
+                    <p className="text-black hover:text-branch_color duration-500">
+                        contact us
+                    </p>
                 </Link>
             </div>
-            <Link href="/cart" className="flex-initial justify-end items-center w-50">
-                <Image 
-                src="/cart_logo.png" 
-                alt="" 
-                width={80}
-                height={80}
-                className="hidden md:block"
-                />
+            <Link href="/cart" className="flex-initial justify-end items-center w-50 h-50 relative group">
+                <div className="relative w-50 h-50 justify-center items-center">
+                    <Image 
+                    src="/cart_logo.png" 
+                    alt="Shopping Cart" 
+                    width={80}
+                    height={80}
+                    className="w-50 transition-transform duration-500 transform hover:scale-110"
+                    />
+                    <Image
+                    src="/golden_cart_logo.png"
+                    alt="Golden Shopping Cart"
+                    width={80}
+                    height={80}
+                    className="absolute top-0 left-0 w-50 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                </div>
             </Link>
-
         </div>
     )
 }
