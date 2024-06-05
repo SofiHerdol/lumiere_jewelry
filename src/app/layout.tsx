@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { cinzel, cinzel_decorative } from "./fonts";
+import Navbar from "./components/Navbar";
+import Footer from "./components/footer";
+import TopWrapper from "./components/topwrapper";
 
 export const metadata: Metadata = {
   title: "Lumière",
@@ -14,12 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cinzel.className}`}>
-      <body>
-        <p>L U M I È R E</p>
-        {children}
-        <footer>
-          Todos los derechos reservados © Lumière 2024
-        </footer>
+      <body className="flex flex-col h-screen w-full">
+        <TopWrapper />
+        <Navbar />
+        <main className="flex-grow"> {children} </main>
+        <Footer />
       </body>
     </html>
   );

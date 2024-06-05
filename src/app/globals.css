@@ -16,9 +16,28 @@
   }
 }
 
+* {
+  /* Include padding and border in size calculation */
+  box-sizing: border-box;
+  /* Prevent grid and flex items from spilling out of their container */
+  min-width: 0;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: white
+  /* The body fills all the viewport */
+  min-height: 100dvh;
+
+  background: rgb(235, 235, 235)
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* Balance headings with multiple lines */
+  text-wrap: balance;
+}
+
+p {
+  /* Prevents words from being alone on the last line */
+  text-wrap: pretty;
 }
 
 @layer utilities {
